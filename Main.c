@@ -22,6 +22,7 @@ void PrintByte(unsigned char byte)
 			printf("1");
 		else
 			printf("0");
+	puts("");
 }
 
 int main()
@@ -29,6 +30,9 @@ int main()
 	unsigned char flag = 0;
 
 	flag |= CHECK_0 | CHECK_1 | CHECK_2 | CHECK_6;
+	PrintByte(flag);
+
+	flag ^= CHECK_1 | CHECK_2 | CHECK_5;
 	PrintByte(flag);
 
 	return 0;
